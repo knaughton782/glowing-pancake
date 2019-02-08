@@ -82,3 +82,40 @@ header {
 	}
 }
 
+// .cd-primary-nav {
+nav {
+    display: inline;
+    margin: 0;
+	
+	ul {
+    background-color: $zen-color-5;
+    padding: 15px 40px;
+    text-align: left;
+    float: left;
+	width: 100%;
+	
+		li {
+		display: inline;
+		padding: 15px;
+		}
+	}
+}
+
+nav a {
+    text-decoration: none;
+    line-height: 1.2em;
+	font-size: 1.5em;
+	
+	a:link {
+    color: $zen-color-10;
+	}
+	a:visited {
+		color: $zen-color-10;
+	}
+	a:hover {
+    color: $zen-color-2;
+	}
+	a:active {
+    color: $zen-color-1;
+	}
+}

@@ -239,6 +239,48 @@ header {
   border-color: #83b09b;
 }
 
+nav {
+  display: inline;
+  margin: 0;
+}
+nav ul {
+  background-color: #505a6e;
+  padding: 15px 40px;
+  text-align: left;
+  float: left;
+  width: 100%;
+}
+nav ul li {
+  display: inline;
+  padding: 15px;
+}
+
+nav a {
+  text-decoration: none;
+  line-height: 1.2em;
+  font-size: 1.5em;
+}
+
+/* unvisited link */
+nav a:link {
+  color: #f5f3e6;
+}
+
+/* visited link */
+nav a:visited {
+  color: #f5f3e6;
+}
+
+/* mouse over link */
+nav a:hover {
+  color: #f37f80;
+}
+
+/* selected link */
+nav a:active {
+  color: #986E00;
+}
+
 /* -------------------------------- 
 
 xPage title 

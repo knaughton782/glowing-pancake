@@ -1,0 +1,84 @@
+header {
+	background-color: $zen-color-5;
+}
+
+.cd-logo {
+	/* logo box style */
+	background-color: $zen-color-7;
+	border-bottom: 2px solid $zen-color-5;
+	width: 120px;
+
+	@include MQ(M) {
+		width: 180px;
+	}
+}
+
+.cd-main-nav {
+	/* main navigation background color - full screen on small devices */
+	background: $zen-color-5;
+
+	li a {
+		color: $zen-color-10;
+		border-color: lighten($zen-color-5, 25%);
+		
+	}
+
+	@include MQ(M) {
+		li a {
+			color: lighten($zen-color-5, 40%);
+
+			&.selected {
+				color: $zen-color-10;
+				box-shadow: 0 2px 0  $zen-color-7;
+			}
+
+			.no-touch &:hover {
+				color: $zen-color-10;
+			}
+		}
+	}
+}
+
+.cd-nav-trigger span {
+	/* hamburger menu */
+	background-color: $zen-color-10;
+	
+
+	&::before,
+	&::after {
+		/* upper and lower lines */
+		background-color: $zen-color-10;
+	}
+}
+
+.nav-is-visible .cd-nav-trigger span {
+	/* hide line in the center on mobile when nav is visible */
+	background-color: rgba($zen-color-10, 0);
+
+	&::before, &::after {
+		/* preserve visibility of upper and lower lines - close icon */
+		background-color: rgba($zen-color-10, 1);
+	}
+}
+
+.cd-download {
+	/* download button top-right visible on big devices */
+	background-color: $zen-color-10;
+	border-bottom: 1px solid $zen-color-5;
+
+	.no-touch &:hover {
+		background-color: lighten($zen-color-4, 15%);
+	}
+
+	span {
+		/* tooltip */
+		background:  $zen-color-7;
+		color: lighten($zen-color-9, 35%);
+
+		&::before {
+			/* right arrow color */
+			border-color:  $zen-color-7;
+		}
+	}
+}
+

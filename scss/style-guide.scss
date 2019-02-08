@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans');
+@import url('https://fonts.googleapis.com/css?family=Sancreek');
+@import 'partials/prefix-mixins';
+@import 'partials/layout'; // responsive grid and media queries
+
+// styleguide template color palette only
+
+$color-1: #5f8ee4; // Cornflower Blue - Action color
+$color-2: #19191a; // Dark Blue
+$color-3: #e4655f; // Red
+$color-4: #e6e6e6; // light grey
+$color-5: #ffffff; // white
+
+// zen site colors
+@import 'partials/colors';
+
+// fonts
+$title-font:'Sancreek', cursive;
+$primary-font: 'Alegreya Sans', sans-serif;
+$secondary-font: 'Alegreya Sans', sans-serif; //bold & uppercase
+
+/* -------------------------------- 
+
+xBackground 
+
+-------------------------------- */
+
+body {
+	/* this is the page background */
+	background-color: $zen-color-10;
+}
+
+/* -------------------------------- 
+
+xPatterns
+
+-------------------------------- */
+
+.cd-box {
+	/* this is the container of various design elements - i.e. the 2 logo of the branding section */
+	border: 1px solid $zen-color-6;
+	border-radius: 3px;
+	background: $color-5;
+	box-shadow: 0 1px 1px rgba(#000, .05);
+	padding: 6px;
+}
+
+/* -------------------------------- 
+
+xNavigation 
+
+-------------------------------- */
+
+@import 'partials/nav';
+
+/* -------------------------------- 
+
+xPage title 
+
+-------------------------------- */
+
+main > h1 {
+	color: $zen-color-1;
+	font-family: $title-font;
+
+	@include MQ(L) {
+		/* title goes into the header on big devices */
+		color: $zen-color-10;
+	}
+}
+
+/* -------------------------------- 
+
+xTypography 
+
+-------------------------------- */
+
+@import 'partials/typography';
+
+/* -------------------------------- 
+
+xButtons 
+
+-------------------------------- */
+
+@import 'partials/buttons';
+
+/* -------------------------------- 
+
+xIcons 
+
+-------------------------------- */
+
+.cd-icons li {
+	/* icons size */
+	width: 250px;
+	height: 250px;
+}
+
+/* -------------------------------- 
+
+xForm 
+
+-------------------------------- */
+@import 'partials/form';
+
+
+@import 'partials/basic-style';

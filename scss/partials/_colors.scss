@@ -1,0 +1,195 @@
+// color palette - these colors will be the color swatches of the Colors section
+
+$zen-color-1: #e64140; // Licorice
+$zen-color-2: #f37f80; // Bubblegum
+$zen-color-3: #eaa959; // Lion
+$zen-color-4: #b4d1c8; // Sky
+$zen-color-5: #505a6e; // Denim
+$zen-color-6: #c7d3a5; // Trapeze
+$zen-color-7: #83b09b; // Mint
+$zen-color-8: #449375; // Emerald
+$zen-color-9: #e6e7e8; // Elephant
+$zen-color-10: #f5f3e6; // Popcorn
+
+// additional colors
+
+$success: $zen-color-8; // Emerald
+$alert: $zen-color-1;  // Licorice
+
+/* xColor section - basic style */
+
+.cd-colors {
+
+	li {
+		text-align: center;
+		@include column(.48);
+		margin: 0 4% 1em 0;
+
+		&:nth-of-type(2n) {
+			margin-right: 0;
+		}
+	}
+
+	.cd-color-swatch {
+		position: relative;
+		width: 100%;
+		padding: 50% 0;
+
+		&::before, &::after {
+			/* lighter and darker color shades of the same swatch */
+			content: '';
+			position: absolute;
+			bottom: 0;
+			width: 50%;
+			height: 20%;
+		}
+
+		&::before {
+			left: 0;
+		}
+
+		&::after {
+			right: 0;
+		}
+	}
+
+	b {
+		display: block;
+		padding: .6em 0;
+	}
+
+	li:nth-of-type(1) .cd-color-swatch {
+		background: $zen-color-1;
+
+		&::before {
+			background: lighten($zen-color-1, 5%);
+		}
+
+		&::after {
+			background: darken($zen-color-1, 5%);
+		}
+	}
+
+	li:nth-of-type(2) .cd-color-swatch {
+		background: $zen-color-2;
+
+		&::before {
+			background: lighten($zen-color-2, 5%);
+		}
+
+		&::after {
+			background: darken($zen-color-2, 5%);
+		}
+	}
+
+	li:nth-of-type(3) .cd-color-swatch {
+		background: $zen-color-3;
+
+		&::before {
+			background: lighten($zen-color-3, 5%);
+		}
+
+		&::after {
+			background: darken($zen-color-3, 5%);
+		}
+	}
+
+	li:nth-of-type(4) .cd-color-swatch {
+		background: $zen-color-4;
+
+		&::before {
+			background: lighten($zen-color-4, 5%);
+		}
+
+		&::after {
+			background: darken($zen-color-4, 5%);
+		}
+	}
+
+	li:nth-of-type(5) .cd-color-swatch {
+		background: $zen-color-5;
+
+		&::before {
+			background: lighten($zen-color-5, 5%);
+		}
+
+		&::after {
+			background: darken($zen-color-5, 5%);
+		}
+    }
+    
+    li:nth-of-type(6) .cd-color-swatch {
+		background: $zen-color-6;
+
+		&::before {
+			background: lighten($zen-color-6, 5%);
+		}
+
+		&::after {
+			background: darken($zen-color-6, 5%);
+		}
+    }
+    
+    li:nth-of-type(7) .cd-color-swatch {
+		background: $zen-color-7;
+
+		&::before {
+			background: lighten($zen-color-7, 5%);
+		}
+
+		&::after {
+			background: darken($zen-color-7, 5%);
+		}
+    }
+    
+    li:nth-of-type(8) .cd-color-swatch {
+		background: $zen-color-8;
+
+		&::before {
+			background: lighten($zen-color-8, 5%);
+		}
+
+		&::after {
+			background: darken($zen-color-8, 5%);
+		}
+    }
+    
+    li:nth-of-type(9) .cd-color-swatch {
+		background: $zen-color-9;
+
+		&::before {
+			background: lighten($zen-color-9, 5%);
+		}
+
+		&::after {
+			background: darken($zen-color-9, 5%);
+		}
+    }
+    
+    li:nth-of-type(10) .cd-color-swatch {
+		background: $zen-color-10;
+
+		&::before {
+			background: lighten($zen-color-10, 5%);
+		}
+
+		&::after {
+			background: darken($zen-color-10, 5%);
+		}
+	}
+
+	@include MQ(S) {
+		li {
+			@include column(.19);
+			margin: 0 1.25% 1em 0;
+
+			&:nth-of-type(2n) {
+				margin-right: 1.25%;
+			}
+
+			&:nth-of-type(5n) {
+				margin-right: 0;
+			}
+		}
+	}
+}

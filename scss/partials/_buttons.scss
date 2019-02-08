@@ -1,0 +1,59 @@
+.btn {
+	border: none;
+	box-shadow: none;
+	border-radius: .25em;
+	text-transform: uppercase;
+	font: {
+		size: 1.4rem;
+		family: $secondary-font;
+		weight: 700;
+	}
+	color: $zen-color-10;
+	padding: .6em 2.2em;
+	cursor: pointer;
+	background: $zen-color-5;
+
+	&:focus {
+		outline: none;
+	}
+
+	.no-touch &:hover {
+		background: lighten($zen-color-5, 5%);
+	}
+
+	&.btn-success {
+		background: $success;
+
+		.no-touch &:hover {
+			background: lighten($success, 5%);
+		}
+	}
+
+	&.btn-alert {
+		background: $zen-color-1;
+
+		.no-touch &:hover {
+			background: lighten($zen-color-1, 5%);
+		}
+	}
+
+	&.btn-outline {
+		color: $zen-color-5;
+		background: transparent;
+		box-shadow: inset 0 0 0 1px $zen-color-5;
+
+		.no-touch &:hover {
+			color: $zen-color-10;
+			background: $zen-color-5;
+		}
+	}
+
+	@include MQ(S) {
+		font-size: 1.6rem;
+	}
+}
+
+.cd-buttons .cd-box:nth-of-type(2) span {
+	/* CSS class name color */ 
+	color: $zen-color-8;
+}
